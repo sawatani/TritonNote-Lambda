@@ -5,4 +5,4 @@ target/
 bin/
 node_modules
 *.zip
-test-output.*
+test-*

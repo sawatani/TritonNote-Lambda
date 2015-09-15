@@ -1,6 +1,6 @@
 var gm = require('gm').subClass({ imageMagick: true });
 var async = require('async');
-var yaml = require('js-yaml');
+var yaml = require('yaml-js');
 var aws = require('aws-sdk');
 var s3 = new aws.S3();
 
