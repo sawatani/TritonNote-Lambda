@@ -44,7 +44,7 @@ var proc = function(src, next) {
     					  function(next) {
     						  s3.getObject({
     							  Bucket: src.bucket, 
-    							  Key: "unauthorized/settings.yaml"
+    							  Key: "unauthorized/lambda.yaml"
     						  }, next);
     					  },
     					  function(res, next) {
