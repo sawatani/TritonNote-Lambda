@@ -1,6 +1,5 @@
 var gm = require('gm').subClass({ imageMagick: true });
 var async = require('async');
-var yaml = require('yaml-js');
 var aws = require('aws-sdk');
 var s3 = new aws.S3();
 
@@ -44,12 +43,12 @@ var proc = function(src, next) {
     					  function(next) {
     						  s3.getObject({
     							  Bucket: src.bucket, 
-    							  Key: "unauthorized/lambda.yaml"
+    							  Key: "lambda/settings.json"
     						  }, next);
     					  },
     					  function(res, next) {
     						  var text = res.Body.toString();
-    						  var settings = yaml.load(text);
+    						  var settings = JSON.parse(text);
     						  log("Settings: ", settings);
     						  next(null, settings.photo.reduced);
     					  },

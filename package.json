@@ -5,8 +5,7 @@
   "main": "main.js",
   "dependencies": {
     "async": "^1.4.2",
-    "gm": "^1.18.1",
-    "yaml-js": "^0.1.1"
+    "gm": "^1.18.1"
   },
   "devDependencies": {},
   "scripts": {
